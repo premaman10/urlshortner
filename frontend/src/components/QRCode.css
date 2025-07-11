@@ -8,7 +8,7 @@
 
 .qr-canvas-small {
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(99,102,241,0.10);
 }
 
 .qr-loading-small {
@@ -44,8 +44,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%);
-  backdrop-filter: blur(20px);
+  background: var(--gradient-accent);
+  backdrop-filter: blur(24px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,17 +54,18 @@
 }
 
 .qr-modal {
-  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  background: var(--glass);
   border-radius: 24px;
   padding: 0;
   max-width: 450px;
   width: 95%;
   max-height: 90vh;
   overflow: hidden;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  animation: modalSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: var(--shadow);
+  animation: modalSlideIn 0.4s cubic-bezier(0.4,0,0.2,1);
+  border: 1.5px solid rgba(255,255,255,0.18);
   position: relative;
+  backdrop-filter: blur(16px);
 }
 
 .qr-modal::before {
@@ -83,16 +84,16 @@
   align-items: center;
   justify-content: space-between;
   padding: 28px 32px 24px;
-  border-bottom: 1px solid #e2e8f0;
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-bottom: 1px solid var(--secondary);
+  background: var(--glass);
   position: relative;
 }
 
 .qr-modal-header h3 {
   margin: 0;
   font-size: 24px;
-  font-weight: 700;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-weight: 800;
+  background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -115,23 +116,23 @@
 }
 
 .close-btn {
-  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-  border: 1px solid #e2e8f0;
+  background: var(--glass);
+  border: 1px solid var(--secondary);
   cursor: pointer;
   padding: 8px;
   border-radius: 12px;
-  color: #6b7280;
-  transition: all 0.3s ease;
+  color: var(--text-light);
+  transition: all 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .close-btn:hover {
-  background: linear-gradient(135deg, #e2e8f0 0%, #d1d5db 100%);
-  color: #374151;
+  background: var(--secondary);
+  color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(99,102,241,0.13);
 }
 
 .qr-modal-content {
@@ -144,9 +145,9 @@
   justify-content: center;
   margin-bottom: 28px;
   min-height: 240px;
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  background: var(--glass);
   border-radius: 16px;
-  border: 2px solid #e2e8f0;
+  border: 2px solid var(--secondary);
   position: relative;
   overflow: hidden;
 }
@@ -164,7 +165,7 @@
 
 .qr-canvas {
   border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 32px rgba(99,102,241,0.13);
   position: relative;
   z-index: 1;
   background: white;
@@ -237,18 +238,17 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--gradient);
   color: white;
   border: none;
   padding: 16px 24px;
   border-radius: 12px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(99,102,241,0.13);
   position: relative;
-  overflow: hidden;
 }
 
 .download-btn::before {
@@ -267,8 +267,10 @@
 }
 
 .download-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  background: var(--accent);
+  color: white;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(244,114,182,0.18);
 }
 
 .download-btn:active {
