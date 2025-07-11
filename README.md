@@ -2,6 +2,11 @@
 
 A full-stack URL shortener application with JWT-based authentication, comprehensive analytics, and modern UI components.
 
+## 🔗 Live Demo
+
+**Deployed on Vercel Both Frontend and Backend:**  
+👉 [https://urlshortner-lake-eta.vercel.app/](https://urlshortner-lake-eta.vercel.app/)
+
 ## Features
 
 - **Authentication**: JWT-based authentication with modern login/register forms
